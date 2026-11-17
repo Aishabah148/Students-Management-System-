@@ -1,0 +1,152 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./src/style.css">
+
+<body class="min-h-screen bg-slate-100">
+
+    <main class="mx-auto max-w-6xl px-6 py-8">
+
+        <!-- Header -->
+        <header class="rounded-2xl bg-linear-to-r from-indigo-600 to-purple-600 px-8 py-10 text-center text-white shadow-lg">
+            <h1 class="text-4xl font-bold">
+                Student Management System
+            </h1>
+
+            <p class="mt-2 text-indigo-100">
+                Manage student information easily
+            </p>
+        </header>
+
+
+        <!-- Add Student -->
+         <section class="mt-7 rounded-2xl bg-white p-7 shadow-sm">
+
+          <h2 class = "mb-6 text-2xl font-bold text-slate-800" >Add Student</h2>
+
+            <form id="student-form" class="grid gap-5 md:grid-cols-2">
+
+                <!-- Student Name -->
+                <div>
+                    <label
+                        for="student-name"
+                        class="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="student-name"
+                        placeholder="Enter student name"
+                        class="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                    >
+                </div>
+
+
+                <!-- Age -->
+                <div>
+                    <label
+                        for="student-age"
+                        class="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="student-age"
+                        placeholder="Enter age"
+                        class="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                    >
+                </div>
+
+
+                <!-- Course -->
+                <div>
+                    <label
+                        for="student-course"
+                        class="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="student-course"
+                        placeholder="Enter course"
+                        class="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                    >
+                </div>
+
+
+                <!-- Marks -->
+                <div>
+                    <label
+                        for="student-marks"
+                        class="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        Marks
+                    </label>
+
+                    <input
+                        type="number"
+                        id="student-marks"
+                        placeholder="Enter marks"
+                        class="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                    >
+                </div>
+
+
+                <!-- Button -->
+                <button
+                    type="submit"
+                    class="md:col-span-2 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 font-bold text-white transition hover:opacity-90"
+                >
+                    Add Student
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Students -->
+        <section class="mt-7 rounded-2xl bg-white p-7 shadow-sm">
+
+            <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+                <h2 class="text-2xl font-bold text-slate-800">
+                    Students
+                </h2>
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search student..."
+                    class="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 sm:w-64"
+                >
+
+            </div>
+
+
+            <!-- JavaScript will put student cards here -->
+            <div
+                id="student-list"
+                class="grid gap-5 md:grid-cols-2"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+<script src="./src/main.js"></script>
+</body>
+</html>
